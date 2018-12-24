@@ -17,7 +17,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="category2" translatesAutoresizingMaskIntoConstraints="NO" id="fWY-jU-kDW">
-                    <rect key="frame" x="0.0" y="0.0" width="375" height="1343"/>
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vHt-BL-Qio">
                     <rect key="frame" x="96" y="80" width="42" height="21"/>
@@ -26,29 +26,29 @@
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QQT-xG-tu9">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QQT-xG-tu9">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                     <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GBq-nP-15b">
-                            <rect key="frame" x="21" y="439" width="190.5" height="46.5"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Category Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9ZB-F6-9Vc">
+                            <rect key="frame" x="21" y="400" width="231" height="31"/>
+                            <fontDescription key="fontDescription" name="Copperplate-Light" family="Copperplate" pointSize="30"/>
+                            <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GBq-nP-15b" userLabel="Swipe to choose to select">
+                            <rect key="frame" x="21" y="440" width="190.5" height="46.5"/>
                             <string key="text">Swipe to choose
 to select</string>
                             <fontDescription key="fontDescription" name="Copperplate-Light" family="Copperplate" pointSize="23"/>
                             <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Category Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9ZB-F6-9Vc">
-                            <rect key="frame" x="21" y="400" width="231" height="31"/>
-                            <fontDescription key="fontDescription" name="Copperplate-Light" family="Copperplate" pointSize="30"/>
-                            <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            <nil key="highlightedColor"/>
-                        </label>
                     </subviews>
                     <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
-                        <constraint firstAttribute="bottom" secondItem="9ZB-F6-9Vc" secondAttribute="bottom" constant="912" id="1YL-dB-R6D"/>
-                        <constraint firstAttribute="trailing" secondItem="9ZB-F6-9Vc" secondAttribute="trailing" constant="1291" id="6Wh-kO-PAq"/>
-                        <constraint firstItem="GBq-nP-15b" firstAttribute="top" secondItem="9ZB-F6-9Vc" secondAttribute="bottom" constant="8" id="VKa-IH-Yu3"/>
+                        <constraint firstAttribute="bottom" secondItem="9ZB-F6-9Vc" secondAttribute="bottom" constant="236" id="1YL-dB-R6D"/>
+                        <constraint firstAttribute="trailing" secondItem="9ZB-F6-9Vc" secondAttribute="trailing" constant="123" id="6Wh-kO-PAq"/>
+                        <constraint firstItem="GBq-nP-15b" firstAttribute="top" secondItem="9ZB-F6-9Vc" secondAttribute="bottom" constant="9" id="VKa-IH-Yu3"/>
                         <constraint firstItem="GBq-nP-15b" firstAttribute="leading" secondItem="9ZB-F6-9Vc" secondAttribute="leading" id="WYL-6t-7PS"/>
                         <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="GBq-nP-15b" secondAttribute="trailing" constant="20" symbolic="YES" id="Ydv-wt-Xgw"/>
                         <constraint firstItem="9ZB-F6-9Vc" firstAttribute="leading" secondItem="QQT-xG-tu9" secondAttribute="leading" constant="21" id="sd4-MW-ILN"/>
@@ -57,10 +57,14 @@ to select</string>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="fWY-jU-kDW" firstAttribute="bottom" secondItem="iN0-l3-epB" secondAttribute="bottom" constant="676" id="7ku-2o-Zvu"/>
+                <constraint firstItem="QQT-xG-tu9" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="6a2-cH-uOm"/>
+                <constraint firstItem="fWY-jU-kDW" firstAttribute="bottom" secondItem="iN0-l3-epB" secondAttribute="bottom" id="7ku-2o-Zvu"/>
                 <constraint firstItem="fWY-jU-kDW" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="FHu-E7-U43"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="fWY-jU-kDW" secondAttribute="trailing" id="c58-aN-avI"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="top" secondItem="fWY-jU-kDW" secondAttribute="top" constant="20" id="lVe-ci-DMZ"/>
+                <constraint firstItem="QQT-xG-tu9" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="ez8-tJ-bIP"/>
+                <constraint firstAttribute="top" secondItem="QQT-xG-tu9" secondAttribute="top" id="iIr-8j-OpR"/>
+                <constraint firstAttribute="top" secondItem="fWY-jU-kDW" secondAttribute="top" id="lVe-ci-DMZ"/>
+                <constraint firstAttribute="bottom" secondItem="QQT-xG-tu9" secondAttribute="bottom" id="vey-Wq-Zha"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <point key="canvasLocation" x="53.600000000000001" y="48.125937031484263"/>
