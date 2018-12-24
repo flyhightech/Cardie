@@ -1,0 +1,2 @@
+# Cardie
+Motivational Quotes App
