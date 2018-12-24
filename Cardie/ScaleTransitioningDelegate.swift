@@ -95,7 +95,8 @@ extension ScaleTransitioningDelegate:UINavigationControllerDelegate {
         if fromVC is Scaling && toVC is Scaling {
             return self
         } else {
-            return nil 
+            return nil
         }
     }
+    
 }
