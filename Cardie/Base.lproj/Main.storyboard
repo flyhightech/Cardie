@@ -74,37 +74,51 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" pagingEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3zt-q4-zao">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3zt-q4-zao">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="category2" translatesAutoresizingMaskIntoConstraints="NO" id="qEe-eO-2tf">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="category2" translatesAutoresizingMaskIntoConstraints="NO" id="qEe-eO-2tf">
+                                        <rect key="frame" x="0.0" y="0.0" width="959" height="1343"/>
                                     </imageView>
-                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Hf3-0l-7Mo">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hf3-0l-7Mo">
+                                        <rect key="frame" x="0.0" y="0.0" width="1543" height="1343"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Category Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UQL-VH-e0G">
-                                                <rect key="frame" x="69" y="317" width="231" height="31"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" name="Copperplate-Light" family="Copperplate" pointSize="30"/>
-                                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4dc-hQ-1rP">
-                                                <rect key="frame" x="90" y="356" width="191" height="57"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4dc-hQ-1rP">
+                                                <rect key="frame" x="21" y="439" width="190.5" height="46.5"/>
                                                 <string key="text">Swipe to choose
 to select</string>
                                                 <fontDescription key="fontDescription" name="Copperplate-Light" family="Copperplate" pointSize="23"/>
                                                 <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Category Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UQL-VH-e0G">
+                                                <rect key="frame" x="21" y="400" width="231" height="31"/>
+                                                <fontDescription key="fontDescription" name="Copperplate-Light" family="Copperplate" pointSize="30"/>
+                                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                         </subviews>
                                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="4dc-hQ-1rP" secondAttribute="trailing" constant="20" symbolic="YES" id="Hmc-tX-sPc"/>
+                                            <constraint firstAttribute="trailing" secondItem="UQL-VH-e0G" secondAttribute="trailing" constant="1291" id="TmU-mG-Ory"/>
+                                            <constraint firstItem="4dc-hQ-1rP" firstAttribute="leading" secondItem="UQL-VH-e0G" secondAttribute="leading" id="b5h-6B-UrF"/>
+                                            <constraint firstItem="UQL-VH-e0G" firstAttribute="leading" secondItem="Hf3-0l-7Mo" secondAttribute="leading" constant="21" id="eHA-A5-Vql"/>
+                                            <constraint firstItem="4dc-hQ-1rP" firstAttribute="top" secondItem="UQL-VH-e0G" secondAttribute="bottom" constant="8" id="jfg-Sm-wQo"/>
+                                            <constraint firstAttribute="bottom" secondItem="UQL-VH-e0G" secondAttribute="bottom" constant="912" id="nbW-JY-e40"/>
+                                        </constraints>
                                     </view>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="qEe-eO-2tf" secondAttribute="trailing" id="53t-af-Qcn"/>
+                                    <constraint firstAttribute="bottom" secondItem="qEe-eO-2tf" secondAttribute="bottom" id="IKN-DQ-Dj3"/>
+                                    <constraint firstAttribute="bottom" secondItem="Hf3-0l-7Mo" secondAttribute="bottom" id="W6f-wp-EGB"/>
+                                    <constraint firstItem="Hf3-0l-7Mo" firstAttribute="top" secondItem="3zt-q4-zao" secondAttribute="top" id="Wrd-DN-dQ7"/>
+                                    <constraint firstItem="qEe-eO-2tf" firstAttribute="top" secondItem="3zt-q4-zao" secondAttribute="top" id="gE7-0c-Sih"/>
+                                    <constraint firstAttribute="trailing" secondItem="Hf3-0l-7Mo" secondAttribute="trailing" constant="-584" id="gF3-WA-Ff2"/>
+                                    <constraint firstItem="qEe-eO-2tf" firstAttribute="leading" secondItem="3zt-q4-zao" secondAttribute="leading" id="hbQ-6A-t7K"/>
+                                    <constraint firstItem="Hf3-0l-7Mo" firstAttribute="leading" secondItem="3zt-q4-zao" secondAttribute="leading" id="tKW-Lz-Y61"/>
+                                </constraints>
                             </scrollView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ex3-QT-lbe">
                                 <rect key="frame" x="30" y="55" width="26" height="26"/>
@@ -117,9 +131,9 @@ to select</string>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="fK8-i4-phl" firstAttribute="bottom" secondItem="3zt-q4-zao" secondAttribute="bottom" id="BdU-hH-BOt"/>
+                            <constraint firstAttribute="bottom" secondItem="3zt-q4-zao" secondAttribute="bottom" id="BdU-hH-BOt"/>
                             <constraint firstItem="3zt-q4-zao" firstAttribute="leading" secondItem="fK8-i4-phl" secondAttribute="leading" id="EXz-0T-4Lu"/>
-                            <constraint firstItem="fK8-i4-phl" firstAttribute="top" secondItem="3zt-q4-zao" secondAttribute="top" constant="20" id="Eb2-7B-4ep"/>
+                            <constraint firstAttribute="top" secondItem="3zt-q4-zao" secondAttribute="top" id="Eb2-7B-4ep"/>
                             <constraint firstItem="fK8-i4-phl" firstAttribute="trailing" secondItem="3zt-q4-zao" secondAttribute="trailing" id="oD3-fe-mee"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="fK8-i4-phl"/>
