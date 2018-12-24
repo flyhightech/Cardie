@@ -121,10 +121,12 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
+                        <outlet property="delegate" destination="gJW-vZ-TST" id="uyF-ei-Edq"/>
                         <segue destination="Bhk-sN-qkD" kind="relationship" relationship="rootViewController" id="BIw-OB-pqn"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2tK-oy-FNI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="gJW-vZ-TST" customClass="ScaleTransitioningDelegate" customModule="Cardie" customModuleProvider="target"/>
             </objects>
             <point key="canvasLocation" x="0.80000000000000004" y="164.16791604197903"/>
         </scene>
