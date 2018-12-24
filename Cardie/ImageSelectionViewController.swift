@@ -13,6 +13,9 @@ class ImageSelectionViewController: UIViewController {
     var image:UIImage?
     var category:Category?
     
+    let imageDataRequest = DataRequest<Image>(dataSource: "Images")
+    var imageData = [Image]()
+    
     @IBOutlet weak var initialImageView: UIImageView!
     @IBOutlet weak var categoryLabel: UILabel!
     
@@ -24,6 +27,29 @@ class ImageSelectionViewController: UIViewController {
             categoryLabel.text = availableCategory.categoryName
         }
         
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        loadData()
+    }
+    
+    func loadData() {
+        imageDataRequest.getData{ [weak self] dataResult in
+            switch dataResult {
+            case .failure:
+                print("Could not load images")
+            case .success(let images):
+                self?.imageData = images
+                DispatchQueue.main.async {
+                    self?.setupUI()
+                }
+            }
+        }
+    }
+    
+    func setupUI() {
+        guard let photoView = Bundle.main.loadNibNamed("PhotoView", owner: self, options: nil)?.first as? PhotoView else {return}
     }
     
     @IBAction func goBack(_ sender: UIButton) {

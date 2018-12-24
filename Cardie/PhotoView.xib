@@ -12,7 +12,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" id="iN0-l3-epB">
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="PhotoView" customModule="Cardie" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
@@ -67,6 +67,11 @@ to select</string>
                 <constraint firstAttribute="bottom" secondItem="QQT-xG-tu9" secondAttribute="bottom" id="vey-Wq-Zha"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="descriptionLabel" destination="9ZB-F6-9Vc" id="eQM-ts-eXw"/>
+                <outlet property="imageView" destination="fWY-jU-kDW" id="1EK-MP-uPF"/>
+                <outlet property="photographerLabel" destination="GBq-nP-15b" id="FBo-Va-yWw"/>
+            </connections>
             <point key="canvasLocation" x="53.600000000000001" y="48.125937031484263"/>
         </view>
     </objects>
