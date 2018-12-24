@@ -50,6 +50,52 @@ extension ScaleTransitioningDelegate : UIViewControllerAnimatedTransitioning {
         containerView.addSubview(backgroundVC.view)
         containerView.addSubview(foregroundVC.view)
         containerView.addSubview(imageViewSnapshot)
+        
+        let transitionStateA = TransitionState.begin
+        let transitionStateB = TransitionState.end
+        
+        prepareViews(for: transitionStateA, containerView: containerView, backgroundVC: backgroundVC, backgroundImageView: backgroundImageView, foregroundImageView: foregroundImageView, snapshotImageView: imageViewSnapshot)
+        
+        foregroundVC.view.layoutIfNeeded()
+        
+        UIView.animate(withDuration: transitionDuration(using: transitionContext), delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 0, options: [], animations: {
+            self.prepareViews(for: transitionStateB, containerView: containerView, backgroundVC: backgroundVC, backgroundImageView: backgroundImageView, foregroundImageView: foregroundImageView, snapshotImageView: imageViewSnapshot)
+        }) { _ in
+            backgroundVC.view.transform = .identity
+            imageViewSnapshot.removeFromSuperview()
+            backgroundImageView.isHidden = false
+            foregroundImageView.isHidden = false
+            
+            foregroundVC.view.backgroundColor = foregroundBGColor
+            transitionContext.completeTransition(!transitionContext.transitionWasCancelled)
+        }
+        
     }
     
+    func prepareViews(for state: TransitionState, containerView: UIView, backgroundVC:UIViewController, backgroundImageView: UIImageView, foregroundImageView:UIImageView, snapshotImageView: UIImageView) {
+        
+        switch state {
+        case .begin:
+            backgroundVC.view.transform = .identity
+            backgroundVC.view.alpha = 1
+            
+            snapshotImageView.frame = containerView.convert(backgroundImageView.frame, from: backgroundImageView.superview)
+        case .end:
+            backgroundVC.view.alpha = 0
+            snapshotImageView.frame = containerView.convert(foregroundImageView.frame, from: foregroundImageView.superview)
+        
+        }
+    }
+}
+
+extension ScaleTransitioningDelegate:UINavigationControllerDelegate {
+    
+    func navigationController(_ navigationController: UINavigationController, animationControllerFor operation: UINavigationController.Operation, from fromVC: UIViewController, to toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        
+        if fromVC is Scaling && toVC is Scaling {
+            return self
+        } else {
+            return nil 
+        }
+    }
 }
