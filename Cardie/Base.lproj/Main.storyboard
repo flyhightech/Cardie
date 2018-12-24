@@ -59,7 +59,7 @@
                     </collectionView>
                     <navigationItem key="navigationItem" title="Cardie" id="QT4-Wj-DQ5"/>
                     <connections>
-                        <segue destination="vpr-94-6yU" kind="show" id="ULN-VM-NlB"/>
+                        <segue destination="vpr-94-6yU" kind="show" identifier="showDetail" id="ULN-VM-NlB"/>
                     </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LOp-n3-HIm" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -74,9 +74,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qEe-eO-2tf">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qEe-eO-2tf">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Category Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UQL-VH-e0G">
                                 <rect key="frame" x="69" y="239" width="237" height="32"/>
@@ -87,6 +86,12 @@
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="qEe-eO-2tf" firstAttribute="top" secondItem="jLs-Jc-i2Q" secondAttribute="top" id="1rb-px-iui"/>
+                            <constraint firstItem="qEe-eO-2tf" firstAttribute="leading" secondItem="fK8-i4-phl" secondAttribute="leading" id="5wj-Sb-tfi"/>
+                            <constraint firstItem="qEe-eO-2tf" firstAttribute="trailing" secondItem="fK8-i4-phl" secondAttribute="trailing" id="7PH-xD-UIH"/>
+                            <constraint firstItem="qEe-eO-2tf" firstAttribute="bottom" secondItem="fK8-i4-phl" secondAttribute="bottom" id="sLS-LF-asU"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="fK8-i4-phl"/>
                     </view>
                     <nil key="simulatedTopBarMetrics"/>

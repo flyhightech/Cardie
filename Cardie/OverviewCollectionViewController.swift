@@ -30,6 +30,15 @@ class OverviewCollectionViewController: UICollectionViewController {
         }
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showDetail" {
+            let category = sender as! Category
+            guard let image = UIImage(named: category.categoryImageName) else {return}
+            let imageSelectionVC = segue.destination as! ImageSelectionViewController
+            imageSelectionVC.image = image
+            imageSelectionVC.category = category
+        }
+    }
 }
 
 // MARK: - CollectionView DataSource
@@ -67,7 +76,8 @@ extension OverviewCollectionViewController {
     
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
-        
+        let category = categoryData[indexPath.item]
+        self.performSegue(withIdentifier: "showDetail", sender: category)
     }
 }
 
