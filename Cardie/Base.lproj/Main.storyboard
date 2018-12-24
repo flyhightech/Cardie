@@ -74,23 +74,53 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qEe-eO-2tf">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" pagingEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3zt-q4-zao">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Category Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UQL-VH-e0G">
-                                <rect key="frame" x="69" y="239" width="237" height="32"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="category2" translatesAutoresizingMaskIntoConstraints="NO" id="qEe-eO-2tf">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Hf3-0l-7Mo">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Category Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UQL-VH-e0G">
+                                                <rect key="frame" x="69" y="317" width="231" height="31"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="Copperplate-Light" family="Copperplate" pointSize="30"/>
+                                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4dc-hQ-1rP">
+                                                <rect key="frame" x="90" y="356" width="191" height="57"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <string key="text">Swipe to choose
+to select</string>
+                                                <fontDescription key="fontDescription" name="Copperplate-Light" family="Copperplate" pointSize="23"/>
+                                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </view>
+                                </subviews>
+                            </scrollView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ex3-QT-lbe">
+                                <rect key="frame" x="30" y="55" width="26" height="26"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="31"/>
-                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                                <state key="normal" image="CancelButtonLight"/>
+                                <connections>
+                                    <action selector="goBack:" destination="vpr-94-6yU" eventType="touchUpInside" id="0g0-Jj-hbJ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="qEe-eO-2tf" firstAttribute="top" secondItem="jLs-Jc-i2Q" secondAttribute="top" id="1rb-px-iui"/>
-                            <constraint firstItem="qEe-eO-2tf" firstAttribute="leading" secondItem="fK8-i4-phl" secondAttribute="leading" id="5wj-Sb-tfi"/>
-                            <constraint firstItem="qEe-eO-2tf" firstAttribute="trailing" secondItem="fK8-i4-phl" secondAttribute="trailing" id="7PH-xD-UIH"/>
-                            <constraint firstItem="qEe-eO-2tf" firstAttribute="bottom" secondItem="fK8-i4-phl" secondAttribute="bottom" id="sLS-LF-asU"/>
+                            <constraint firstItem="fK8-i4-phl" firstAttribute="bottom" secondItem="3zt-q4-zao" secondAttribute="bottom" id="BdU-hH-BOt"/>
+                            <constraint firstItem="3zt-q4-zao" firstAttribute="leading" secondItem="fK8-i4-phl" secondAttribute="leading" id="EXz-0T-4Lu"/>
+                            <constraint firstItem="fK8-i4-phl" firstAttribute="top" secondItem="3zt-q4-zao" secondAttribute="top" constant="20" id="Eb2-7B-4ep"/>
+                            <constraint firstItem="fK8-i4-phl" firstAttribute="trailing" secondItem="3zt-q4-zao" secondAttribute="trailing" id="oD3-fe-mee"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="fK8-i4-phl"/>
                     </view>
@@ -132,6 +162,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="CancelButtonLight" width="26" height="26"/>
         <image name="category1" width="959" height="1343"/>
+        <image name="category2" width="959" height="1343"/>
     </resources>
 </document>

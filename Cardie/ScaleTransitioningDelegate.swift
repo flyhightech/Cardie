@@ -19,6 +19,7 @@ enum TransitionState {
 
 class ScaleTransitioningDelegate: NSObject {
     let animationDuration = 0.5
+    var navigationControllerOperation: UINavigationController.Operation = .none
 }
 
 extension ScaleTransitioningDelegate : UIViewControllerAnimatedTransitioning {
@@ -29,8 +30,18 @@ extension ScaleTransitioningDelegate : UIViewControllerAnimatedTransitioning {
     func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
         let containerView = transitionContext.containerView
         
-        guard let backgroundVC = transitionContext.viewController(forKey: .from) else {return}
-        guard let foregroundVC = transitionContext.viewController(forKey: .to) else {return}
+        
+        
+        guard let fromVC = transitionContext.viewController(forKey: .from) else {return}
+        guard let toVC = transitionContext.viewController(forKey: .to) else {return}
+        
+        var backgroundVC = fromVC
+        var foregroundVC = toVC
+        
+        if navigationControllerOperation == .pop {
+            backgroundVC = toVC
+            foregroundVC = fromVC
+        }
         
         guard let backgroundImageView = (backgroundVC as? Scaling)?.scalingImageView(transition: self) else {return}
         
@@ -39,6 +50,10 @@ extension ScaleTransitioningDelegate : UIViewControllerAnimatedTransitioning {
         let imageViewSnapshot = UIImageView(image: backgroundImageView.image)
         imageViewSnapshot.contentMode = .scaleAspectFill
         imageViewSnapshot.layer.masksToBounds = true
+        
+        if navigationControllerOperation == .pop {
+            imageViewSnapshot.layer.cornerRadius = 14
+        }
         
         backgroundImageView.isHidden = true
         foregroundImageView.isHidden = true
@@ -51,8 +66,13 @@ extension ScaleTransitioningDelegate : UIViewControllerAnimatedTransitioning {
         containerView.addSubview(foregroundVC.view)
         containerView.addSubview(imageViewSnapshot)
         
-        let transitionStateA = TransitionState.begin
-        let transitionStateB = TransitionState.end
+        var transitionStateA = TransitionState.begin
+        var transitionStateB = TransitionState.end
+        
+        if navigationControllerOperation == .pop {
+            transitionStateA = .end
+            transitionStateB = .begin
+        }
         
         prepareViews(for: transitionStateA, containerView: containerView, backgroundVC: backgroundVC, backgroundImageView: backgroundImageView, foregroundImageView: foregroundImageView, snapshotImageView: imageViewSnapshot)
         
@@ -93,6 +113,9 @@ extension ScaleTransitioningDelegate:UINavigationControllerDelegate {
     func navigationController(_ navigationController: UINavigationController, animationControllerFor operation: UINavigationController.Operation, from fromVC: UIViewController, to toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         
         if fromVC is Scaling && toVC is Scaling {
+            self.navigationControllerOperation = operation
+            let navbarVisible = operation == .pop
+            navigationController.setNavigationBarHidden(!navbarVisible, animated: true)
             return self
         } else {
             return nil
