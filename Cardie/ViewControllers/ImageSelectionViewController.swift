@@ -22,6 +22,8 @@ class ImageSelectionViewController: UIViewController {
     @IBOutlet weak var backButton: UIButton!
     @IBOutlet weak var initialDimView: UIView!
     
+    var currentScrollViewPage:Int = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -62,6 +64,8 @@ class ImageSelectionViewController: UIViewController {
             self.backButton.alpha = 1
         }
         
+        scrollView.delegate = self
+        
         scrollView.contentSize.width = self.scrollView.frame.width * CGFloat(imageData.count + 1)
         
         for (i, image) in imageData.enumerated() {
@@ -76,6 +80,21 @@ class ImageSelectionViewController: UIViewController {
             photoView.photographerLabel.text = image.photographer
             
             scrollView.addSubview(photoView)
+        }
+        
+        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(ImageSelectionViewController.didPressOnScrollView(recognizer:)))
+        
+        scrollView.addGestureRecognizer(tapGestureRecognizer)
+        
+    }
+    
+    @objc
+    func didPressOnScrollView(recognizer:UITapGestureRecognizer) {
+        if currentScrollViewPage != 0 {
+            self.performSegue(withIdentifier: "showCard", sender: self)
+        } else {
+            scrollView.setContentOffset(CGPoint(x: self.view.frame.width, y: 0), animated: true)
+            currentScrollViewPage = 1
         }
     }
     
@@ -92,10 +111,27 @@ class ImageSelectionViewController: UIViewController {
             })
         }
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showCard" {
+            guard let sendCardVC = segue.destination as? SendCardViewController else {return}
+            guard let imageToSend = UIImage(named: imageData[currentScrollViewPage - 1].imageName) else {return}
+            
+            sendCardVC.backgroundImage = imageToSend
+            sendCardVC.modalTransitionStyle = .crossDissolve
+        }
+    }
+    
 }
 
 extension ImageSelectionViewController:Scaling {
     func scalingImageView(transition: ScaleTransitioningDelegate) -> UIImageView? {
         return initialImageView
+    }
+}
+
+extension ImageSelectionViewController:UIScrollViewDelegate {
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        currentScrollViewPage = Int(scrollView.contentOffset.x / scrollView.frame.size.width)
     }
 }

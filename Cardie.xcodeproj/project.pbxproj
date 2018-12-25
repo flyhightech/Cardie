@@ -24,6 +24,7 @@
 		A1B3172D21D05C0500311756 /* ScaleTransitioningDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B3172C21D05C0500311756 /* ScaleTransitioningDelegate.swift */; };
 		A1CF4B9121B86ADF00215CE0 /* OverviewCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CF4B9021B86ADF00215CE0 /* OverviewCollectionViewController.swift */; };
 		A1CF4B9321B871B200215CE0 /* CategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CF4B9221B871B100215CE0 /* CategoryCollectionViewCell.swift */; };
+		A1F77E0F21D211B600E1BB6A /* SendCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F77E0E21D211B600E1BB6A /* SendCardViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		A1B3172C21D05C0500311756 /* ScaleTransitioningDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScaleTransitioningDelegate.swift; sourceTree = "<group>"; };
 		A1CF4B9021B86ADF00215CE0 /* OverviewCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewCollectionViewController.swift; sourceTree = "<group>"; };
 		A1CF4B9221B871B100215CE0 /* CategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewCell.swift; sourceTree = "<group>"; };
+		A1F77E0E21D211B600E1BB6A /* SendCardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendCardViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,13 +83,11 @@
 				A149B9C721AFA459009C23E9 /* Model */,
 				A149B9C021AFA42B009C23E9 /* Data */,
 				A149B9AC21AFA202009C23E9 /* AppDelegate.swift */,
-				A1CF4B9021B86ADF00215CE0 /* OverviewCollectionViewController.swift */,
-				A1B3172A21D0508200311756 /* ImageSelectionViewController.swift */,
 				A1CF4B9221B871B100215CE0 /* CategoryCollectionViewCell.swift */,
 				A1B3172C21D05C0500311756 /* ScaleTransitioningDelegate.swift */,
+				A1F77E1021D211EA00E1BB6A /* ViewControllers */,
+				A1F77E1121D2929700E1BB6A /* PhotoView */,
 				A149B9B021AFA202009C23E9 /* Main.storyboard */,
-				A1AD151521D17DCF00BD1FDF /* PhotoView.xib */,
-				A1AD151721D1905900BD1FDF /* PhotoView.swift */,
 				A149B9B321AFA20E009C23E9 /* Assets.xcassets */,
 				A149B9B521AFA20E009C23E9 /* LaunchScreen.storyboard */,
 				A149B9B821AFA20E009C23E9 /* Info.plist */,
@@ -114,6 +114,25 @@
 				A149B9CB21AFA459009C23E9 /* DataRequest.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		A1F77E1021D211EA00E1BB6A /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				A1CF4B9021B86ADF00215CE0 /* OverviewCollectionViewController.swift */,
+				A1B3172A21D0508200311756 /* ImageSelectionViewController.swift */,
+				A1F77E0E21D211B600E1BB6A /* SendCardViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		A1F77E1121D2929700E1BB6A /* PhotoView */ = {
+			isa = PBXGroup;
+			children = (
+				A1AD151521D17DCF00BD1FDF /* PhotoView.xib */,
+				A1AD151721D1905900BD1FDF /* PhotoView.swift */,
+			);
+			path = PhotoView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -195,6 +214,7 @@
 				A1B3172B21D0508200311756 /* ImageSelectionViewController.swift in Sources */,
 				A149B9CE21AFA45A009C23E9 /* Category.swift in Sources */,
 				A1AD151821D1905900BD1FDF /* PhotoView.swift in Sources */,
+				A1F77E0F21D211B600E1BB6A /* SendCardViewController.swift in Sources */,
 				A149B9CF21AFA45A009C23E9 /* DataRequest.swift in Sources */,
 				A1B3172D21D05C0500311756 /* ScaleTransitioningDelegate.swift in Sources */,
 				A1CF4B9121B86ADF00215CE0 /* OverviewCollectionViewController.swift in Sources */,

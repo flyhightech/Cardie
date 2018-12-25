@@ -83,51 +83,14 @@
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="category2" translatesAutoresizingMaskIntoConstraints="NO" id="qEe-eO-2tf">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                     </imageView>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hf3-0l-7Mo">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4dc-hQ-1rP">
-                                                <rect key="frame" x="41" y="460" width="190.5" height="47"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="47" id="M4W-Kb-sfi"/>
-                                                </constraints>
-                                                <string key="text">Swipe to choose
-to select</string>
-                                                <fontDescription key="fontDescription" name="Copperplate-Light" family="Copperplate" pointSize="23"/>
-                                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Category Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UQL-VH-e0G">
-                                                <rect key="frame" x="41" y="421" width="234" height="31"/>
-                                                <fontDescription key="fontDescription" name="Copperplate-Light" family="Copperplate" pointSize="30"/>
-                                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                        </subviews>
-                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.094793450342465752" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="trailing" secondItem="4dc-hQ-1rP" secondAttribute="trailing" constant="143.5" id="3W6-V5-E7j"/>
-                                            <constraint firstAttribute="trailing" secondItem="UQL-VH-e0G" secondAttribute="trailing" constant="100" id="TmU-mG-Ory"/>
-                                            <constraint firstItem="4dc-hQ-1rP" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="UQL-VH-e0G" secondAttribute="leading" id="b5h-6B-UrF"/>
-                                            <constraint firstItem="UQL-VH-e0G" firstAttribute="leading" secondItem="Hf3-0l-7Mo" secondAttribute="leading" constant="41" id="eHA-A5-Vql"/>
-                                            <constraint firstItem="4dc-hQ-1rP" firstAttribute="top" secondItem="UQL-VH-e0G" secondAttribute="bottom" constant="8" id="jfg-Sm-wQo"/>
-                                            <constraint firstAttribute="bottom" secondItem="UQL-VH-e0G" secondAttribute="bottom" constant="215" id="nbW-JY-e40"/>
-                                        </constraints>
-                                    </view>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="qEe-eO-2tf" firstAttribute="width" secondItem="3zt-q4-zao" secondAttribute="width" id="3fc-b9-t1z"/>
                                     <constraint firstAttribute="trailing" secondItem="qEe-eO-2tf" secondAttribute="trailing" id="53t-af-Qcn"/>
                                     <constraint firstAttribute="bottom" secondItem="qEe-eO-2tf" secondAttribute="bottom" id="IKN-DQ-Dj3"/>
                                     <constraint firstItem="qEe-eO-2tf" firstAttribute="height" secondItem="3zt-q4-zao" secondAttribute="height" id="SRc-NN-Rg3"/>
-                                    <constraint firstAttribute="bottom" secondItem="Hf3-0l-7Mo" secondAttribute="bottom" id="W6f-wp-EGB"/>
-                                    <constraint firstItem="Hf3-0l-7Mo" firstAttribute="top" secondItem="3zt-q4-zao" secondAttribute="top" id="Wrd-DN-dQ7"/>
-                                    <constraint firstItem="Hf3-0l-7Mo" firstAttribute="centerY" secondItem="3zt-q4-zao" secondAttribute="centerY" id="ZyK-eK-nnE"/>
                                     <constraint firstItem="qEe-eO-2tf" firstAttribute="top" secondItem="3zt-q4-zao" secondAttribute="top" id="gE7-0c-Sih"/>
-                                    <constraint firstAttribute="trailing" secondItem="Hf3-0l-7Mo" secondAttribute="trailing" id="gF3-WA-Ff2"/>
                                     <constraint firstItem="qEe-eO-2tf" firstAttribute="leading" secondItem="3zt-q4-zao" secondAttribute="leading" id="hbQ-6A-t7K"/>
-                                    <constraint firstItem="Hf3-0l-7Mo" firstAttribute="centerX" secondItem="3zt-q4-zao" secondAttribute="centerX" id="md8-MN-tMe"/>
-                                    <constraint firstItem="Hf3-0l-7Mo" firstAttribute="leading" secondItem="3zt-q4-zao" secondAttribute="leading" id="tKW-Lz-Y61"/>
                                 </constraints>
                             </scrollView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ex3-QT-lbe">
@@ -152,15 +115,82 @@ to select</string>
                     <nil key="simulatedTopBarMetrics"/>
                     <connections>
                         <outlet property="backButton" destination="ex3-QT-lbe" id="NS4-en-8md"/>
-                        <outlet property="categoryLabel" destination="UQL-VH-e0G" id="WfL-5d-nUH"/>
-                        <outlet property="initialDimView" destination="Hf3-0l-7Mo" id="cNX-q9-yDA"/>
                         <outlet property="initialImageView" destination="qEe-eO-2tf" id="JHo-Sh-rcY"/>
                         <outlet property="scrollView" destination="3zt-q4-zao" id="gfB-J4-fvK"/>
+                        <segue destination="fCr-8v-13j" kind="presentation" identifier="showCard" modalTransitionStyle="crossDissolve" id="wg4-jQ-ehq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3CZ-ti-v6f" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1501.5999999999999" y="162.3688155922039"/>
+        </scene>
+        <!--Send Card View Controller-->
+        <scene sceneID="bQ5-Uq-LMf">
+            <objects>
+                <viewController id="fCr-8v-13j" customClass="SendCardViewController" customModule="Cardie" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="yLL-e8-AEE">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GEE-m1-eIq">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JAB-xp-uxy">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="35V-Wq-9qn">
+                                        <rect key="frame" x="35" y="45" width="26" height="26"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" image="CancelButtonDark"/>
+                                        <connections>
+                                            <action selector="dismissVC:" destination="fCr-8v-13j" eventType="touchUpInside" id="4Qo-Yb-eWl"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="The best preperation for tomorrow is to do your best today." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s20-tx-4hW">
+                                        <rect key="frame" x="78" y="289" width="218" height="89"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="By: Random" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="avj-W9-HiP">
+                                        <rect key="frame" x="138" y="401" width="99" height="18"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qWh-Yh-q7q">
+                                        <rect key="frame" x="107" y="248" width="161" height="33"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="Copperplate-Bold" family="Copperplate" pointSize="20"/>
+                                        <state key="normal" title="Share Card">
+                                            <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="shareCard:" destination="fCr-8v-13j" eventType="touchUpInside" id="RYl-sQ-CvG"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="K4a-6F-uDU"/>
+                    </view>
+                    <connections>
+                        <outlet property="authorLabel" destination="avj-W9-HiP" id="bz6-gF-oJL"/>
+                        <outlet property="backgroundImageView" destination="JAB-xp-uxy" id="dj8-vL-HkD"/>
+                        <outlet property="quoteLabel" destination="s20-tx-4hW" id="2hF-PN-O8b"/>
+                        <outlet property="textContainerView" destination="GEE-m1-eIq" id="Nqa-CA-tiX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rMg-yW-XYv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2276" y="162.3688155922039"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="VhL-Fu-1uL">
@@ -190,6 +220,7 @@ to select</string>
         </scene>
     </scenes>
     <resources>
+        <image name="CancelButtonDark" width="26" height="26"/>
         <image name="CancelButtonLight" width="26" height="26"/>
         <image name="category1" width="959" height="1343"/>
         <image name="category2" width="959" height="1343"/>
