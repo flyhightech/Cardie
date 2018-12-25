@@ -151,7 +151,9 @@ to select</string>
                     </view>
                     <nil key="simulatedTopBarMetrics"/>
                     <connections>
+                        <outlet property="backButton" destination="ex3-QT-lbe" id="NS4-en-8md"/>
                         <outlet property="categoryLabel" destination="UQL-VH-e0G" id="WfL-5d-nUH"/>
+                        <outlet property="initialDimView" destination="Hf3-0l-7Mo" id="cNX-q9-yDA"/>
                         <outlet property="initialImageView" destination="qEe-eO-2tf" id="JHo-Sh-rcY"/>
                         <outlet property="scrollView" destination="3zt-q4-zao" id="gfB-J4-fvK"/>
                     </connections>

@@ -19,10 +19,16 @@ class ImageSelectionViewController: UIViewController {
     @IBOutlet weak var initialImageView: UIImageView!
     @IBOutlet weak var categoryLabel: UILabel!
     @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var backButton: UIButton!
+    @IBOutlet weak var initialDimView: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        initialDimView.alpha = 0
+        backButton.alpha = 0
+        
+        
         if let availableImage = image, let availableCategory = category {
             initialImageView.image = availableImage
             categoryLabel.text = availableCategory.categoryName
@@ -51,6 +57,11 @@ class ImageSelectionViewController: UIViewController {
     
     func setupUI() {
         
+        UIView.animate(withDuration: 0.5) {
+            self.initialDimView.alpha = 1
+            self.backButton.alpha = 1
+        }
+        
         scrollView.contentSize.width = self.scrollView.frame.width * CGFloat(imageData.count + 1)
         
         for (i, image) in imageData.enumerated() {
@@ -70,10 +81,17 @@ class ImageSelectionViewController: UIViewController {
     
     @IBAction func goBack(_ sender: UIButton) {
         
-        self.navigationController?.popViewController(animated: true)
-        
+        UIView.animate(withDuration: 0.3, animations: {
+            self.scrollView.setContentOffset(CGPoint.zero, animated: false)
+        }) { _ in
+            UIView.animate(withDuration: 0.2, animations: {
+                self.initialDimView.alpha = 0
+                sender.alpha = 0
+            }, completion: { _ in
+                self.navigationController?.popViewController(animated: true)
+            })
+        }
     }
-    
 }
 
 extension ImageSelectionViewController:Scaling {
