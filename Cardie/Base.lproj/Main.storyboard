@@ -36,9 +36,8 @@
                                             <rect key="frame" x="0.0" y="0.0" width="150" height="200"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Exploration" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yww-dj-9B9">
-                                            <rect key="frame" x="4" y="161" width="113" height="19"/>
-                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Exploration" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yww-dj-9B9">
+                                            <rect key="frame" x="7" y="146" width="113" height="19"/>
                                             <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="18"/>
                                             <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
@@ -46,6 +45,10 @@
                                     </subviews>
                                 </view>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottomMargin" secondItem="Yww-dj-9B9" secondAttribute="bottom" constant="27" id="TmE-bB-La2"/>
+                                    <constraint firstItem="Yww-dj-9B9" firstAttribute="leading" secondItem="2QJ-rb-wzi" secondAttribute="leading" constant="7" id="qFS-Vp-I6v"/>
+                                </constraints>
                                 <connections>
                                     <outlet property="backgroundImageView" destination="zsQ-zG-ubP" id="ODq-2S-3e6"/>
                                     <outlet property="categoryLabel" destination="Yww-dj-9B9" id="RC0-55-2k8"/>
@@ -78,34 +81,37 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="category2" translatesAutoresizingMaskIntoConstraints="NO" id="qEe-eO-2tf">
-                                        <rect key="frame" x="0.0" y="0.0" width="959" height="1343"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                     </imageView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hf3-0l-7Mo">
-                                        <rect key="frame" x="0.0" y="0.0" width="1543" height="1343"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4dc-hQ-1rP">
-                                                <rect key="frame" x="21" y="439" width="190.5" height="46.5"/>
+                                                <rect key="frame" x="41" y="460" width="190.5" height="47"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="47" id="M4W-Kb-sfi"/>
+                                                </constraints>
                                                 <string key="text">Swipe to choose
 to select</string>
                                                 <fontDescription key="fontDescription" name="Copperplate-Light" family="Copperplate" pointSize="23"/>
                                                 <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Category Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UQL-VH-e0G">
-                                                <rect key="frame" x="21" y="400" width="231" height="31"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Category Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UQL-VH-e0G">
+                                                <rect key="frame" x="41" y="421" width="234" height="31"/>
                                                 <fontDescription key="fontDescription" name="Copperplate-Light" family="Copperplate" pointSize="30"/>
                                                 <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
-                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.094793450342465752" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="4dc-hQ-1rP" secondAttribute="trailing" constant="20" symbolic="YES" id="Hmc-tX-sPc"/>
-                                            <constraint firstAttribute="trailing" secondItem="UQL-VH-e0G" secondAttribute="trailing" constant="1291" id="TmU-mG-Ory"/>
+                                            <constraint firstAttribute="trailing" secondItem="UQL-VH-e0G" secondAttribute="trailing" constant="100" id="TmU-mG-Ory"/>
                                             <constraint firstItem="4dc-hQ-1rP" firstAttribute="leading" secondItem="UQL-VH-e0G" secondAttribute="leading" id="b5h-6B-UrF"/>
-                                            <constraint firstItem="UQL-VH-e0G" firstAttribute="leading" secondItem="Hf3-0l-7Mo" secondAttribute="leading" constant="21" id="eHA-A5-Vql"/>
+                                            <constraint firstItem="UQL-VH-e0G" firstAttribute="leading" secondItem="Hf3-0l-7Mo" secondAttribute="leading" constant="41" id="eHA-A5-Vql"/>
                                             <constraint firstItem="4dc-hQ-1rP" firstAttribute="top" secondItem="UQL-VH-e0G" secondAttribute="bottom" constant="8" id="jfg-Sm-wQo"/>
-                                            <constraint firstAttribute="bottom" secondItem="UQL-VH-e0G" secondAttribute="bottom" constant="912" id="nbW-JY-e40"/>
+                                            <constraint firstAttribute="bottom" secondItem="UQL-VH-e0G" secondAttribute="bottom" constant="215" id="nbW-JY-e40"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -114,15 +120,16 @@ to select</string>
                                     <constraint firstAttribute="bottom" secondItem="qEe-eO-2tf" secondAttribute="bottom" id="IKN-DQ-Dj3"/>
                                     <constraint firstAttribute="bottom" secondItem="Hf3-0l-7Mo" secondAttribute="bottom" id="W6f-wp-EGB"/>
                                     <constraint firstItem="Hf3-0l-7Mo" firstAttribute="top" secondItem="3zt-q4-zao" secondAttribute="top" id="Wrd-DN-dQ7"/>
+                                    <constraint firstItem="Hf3-0l-7Mo" firstAttribute="centerY" secondItem="3zt-q4-zao" secondAttribute="centerY" id="ZyK-eK-nnE"/>
                                     <constraint firstItem="qEe-eO-2tf" firstAttribute="top" secondItem="3zt-q4-zao" secondAttribute="top" id="gE7-0c-Sih"/>
-                                    <constraint firstAttribute="trailing" secondItem="Hf3-0l-7Mo" secondAttribute="trailing" constant="-584" id="gF3-WA-Ff2"/>
+                                    <constraint firstAttribute="trailing" secondItem="Hf3-0l-7Mo" secondAttribute="trailing" id="gF3-WA-Ff2"/>
                                     <constraint firstItem="qEe-eO-2tf" firstAttribute="leading" secondItem="3zt-q4-zao" secondAttribute="leading" id="hbQ-6A-t7K"/>
+                                    <constraint firstItem="Hf3-0l-7Mo" firstAttribute="centerX" secondItem="3zt-q4-zao" secondAttribute="centerX" id="md8-MN-tMe"/>
                                     <constraint firstItem="Hf3-0l-7Mo" firstAttribute="leading" secondItem="3zt-q4-zao" secondAttribute="leading" id="tKW-Lz-Y61"/>
                                 </constraints>
                             </scrollView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ex3-QT-lbe">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ex3-QT-lbe">
                                 <rect key="frame" x="30" y="55" width="26" height="26"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="CancelButtonLight"/>
                                 <connections>
                                     <action selector="goBack:" destination="vpr-94-6yU" eventType="touchUpInside" id="0g0-Jj-hbJ"/>
@@ -134,6 +141,8 @@ to select</string>
                             <constraint firstAttribute="bottom" secondItem="3zt-q4-zao" secondAttribute="bottom" id="BdU-hH-BOt"/>
                             <constraint firstItem="3zt-q4-zao" firstAttribute="leading" secondItem="fK8-i4-phl" secondAttribute="leading" id="EXz-0T-4Lu"/>
                             <constraint firstAttribute="top" secondItem="3zt-q4-zao" secondAttribute="top" id="Eb2-7B-4ep"/>
+                            <constraint firstItem="ex3-QT-lbe" firstAttribute="leading" secondItem="fK8-i4-phl" secondAttribute="leading" constant="30" id="Gwb-g6-r9z"/>
+                            <constraint firstItem="ex3-QT-lbe" firstAttribute="top" secondItem="fK8-i4-phl" secondAttribute="top" constant="35" id="bCY-7x-od9"/>
                             <constraint firstItem="fK8-i4-phl" firstAttribute="trailing" secondItem="3zt-q4-zao" secondAttribute="trailing" id="oD3-fe-mee"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="fK8-i4-phl"/>
@@ -142,6 +151,7 @@ to select</string>
                     <connections>
                         <outlet property="categoryLabel" destination="UQL-VH-e0G" id="WfL-5d-nUH"/>
                         <outlet property="initialImageView" destination="qEe-eO-2tf" id="JHo-Sh-rcY"/>
+                        <outlet property="scrollView" destination="3zt-q4-zao" id="gfB-J4-fvK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3CZ-ti-v6f" userLabel="First Responder" sceneMemberID="firstResponder"/>

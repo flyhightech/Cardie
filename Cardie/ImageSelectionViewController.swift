@@ -18,6 +18,7 @@ class ImageSelectionViewController: UIViewController {
     
     @IBOutlet weak var initialImageView: UIImageView!
     @IBOutlet weak var categoryLabel: UILabel!
+    @IBOutlet weak var scrollView: UIScrollView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,7 +50,17 @@ class ImageSelectionViewController: UIViewController {
     }
     
     func setupUI() {
-        guard let photoView = Bundle.main.loadNibNamed("PhotoView", owner: self, options: nil)?.first as? PhotoView else {return}
+        
+        scrollView.contentSize.width = self.scrollView.frame.width * CGFloat(imageData.count + 1)
+        
+        for (i, image) in imageData.enumerated() {
+            let frame = CGRect(x: self.scrollView.frame.width * CGFloat(i + 1), y: 0, width: self.scrollView.frame.width, height: self.scrollView.frame.height)
+            
+            guard let photoView = Bundle.main.loadNibNamed("PhotoView", owner: self, options: nil)?.first as? PhotoView else {return}
+            
+            photoView.frame = frame
+            photoView.imageView.image = UIImage(named: image.imageName)
+        }
     }
     
     @IBAction func goBack(_ sender: UIButton) {
