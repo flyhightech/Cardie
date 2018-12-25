@@ -59,7 +59,12 @@ class ImageSelectionViewController: UIViewController {
             guard let photoView = Bundle.main.loadNibNamed("PhotoView", owner: self, options: nil)?.first as? PhotoView else {return}
             
             photoView.frame = frame
-            photoView.imageView.image = UIImage(named: image.imageName)
+            photoView.imageView.image = UIImage(named: image.imageName)!
+            
+            photoView.descriptionLabel.text = image.description
+            photoView.photographerLabel.text = image.photographer
+            
+            scrollView.addSubview(photoView)
         }
     }
     
