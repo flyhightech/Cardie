@@ -23,27 +23,30 @@
                     <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Category Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9ZB-F6-9Vc">
-                            <rect key="frame" x="21" y="400" width="231" height="31"/>
+                            <rect key="frame" x="21" y="400" width="235" height="30"/>
                             <fontDescription key="fontDescription" name="Copperplate-Light" family="Copperplate" pointSize="30"/>
                             <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GBq-nP-15b" userLabel="Swipe to choose to select">
-                            <rect key="frame" x="21" y="440" width="190.5" height="46.5"/>
-                            <string key="text">Swipe to choose
-to select</string>
-                            <fontDescription key="fontDescription" name="Copperplate-Light" family="Copperplate" pointSize="23"/>
+                            <rect key="frame" x="21" y="440" width="180" height="50"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="180" id="gEo-72-1WK"/>
+                                <constraint firstAttribute="height" constant="50" id="sXI-gj-3Vy"/>
+                            </constraints>
+                            <string key="text">Swipe to choose,
+tap to select</string>
+                            <fontDescription key="fontDescription" name="Copperplate-Light" family="Copperplate" pointSize="20"/>
                             <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
                     </subviews>
                     <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
-                        <constraint firstAttribute="bottom" secondItem="9ZB-F6-9Vc" secondAttribute="bottom" constant="236" id="1YL-dB-R6D"/>
-                        <constraint firstAttribute="trailing" secondItem="9ZB-F6-9Vc" secondAttribute="trailing" constant="123" id="6Wh-kO-PAq"/>
-                        <constraint firstItem="GBq-nP-15b" firstAttribute="top" secondItem="9ZB-F6-9Vc" secondAttribute="bottom" constant="9" id="VKa-IH-Yu3"/>
-                        <constraint firstItem="GBq-nP-15b" firstAttribute="leading" secondItem="9ZB-F6-9Vc" secondAttribute="leading" id="WYL-6t-7PS"/>
-                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="GBq-nP-15b" secondAttribute="trailing" constant="20" symbolic="YES" id="Ydv-wt-Xgw"/>
+                        <constraint firstAttribute="bottom" secondItem="9ZB-F6-9Vc" secondAttribute="bottom" constant="237" id="1YL-dB-R6D"/>
+                        <constraint firstAttribute="trailing" secondItem="9ZB-F6-9Vc" secondAttribute="trailing" constant="119" id="6Wh-kO-PAq"/>
+                        <constraint firstItem="GBq-nP-15b" firstAttribute="leading" secondItem="9ZB-F6-9Vc" secondAttribute="leading" id="AdG-zy-riN"/>
+                        <constraint firstItem="GBq-nP-15b" firstAttribute="top" secondItem="9ZB-F6-9Vc" secondAttribute="bottom" constant="10" id="gWA-3X-CGr"/>
                         <constraint firstItem="9ZB-F6-9Vc" firstAttribute="leading" secondItem="QQT-xG-tu9" secondAttribute="leading" constant="21" id="sd4-MW-ILN"/>
                     </constraints>
                 </view>

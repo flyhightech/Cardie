@@ -84,31 +84,34 @@
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                     </imageView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UwQ-Na-vtv">
-                                        <rect key="frame" x="0.0" y="0.0" width="959" height="1343"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="1566" height="2019"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Photo Category" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BMp-vS-65G">
-                                                <rect key="frame" x="8" y="347" width="209" height="23.5"/>
-                                                <fontDescription key="fontDescription" name="Copperplate-Bold" family="Copperplate" pointSize="23"/>
+                                                <rect key="frame" x="21" y="400" width="260" height="30"/>
+                                                <fontDescription key="fontDescription" name="Copperplate-Bold" family="Copperplate" pointSize="30"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6F0-xU-8FC">
-                                                <rect key="frame" x="8" y="379" width="144" height="36.5"/>
-                                                <string key="text">Swipe to chose,
+                                                <rect key="frame" x="21" y="440" width="172" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="4RV-hA-9xP"/>
+                                                </constraints>
+                                                <string key="text">Swipe to choose,
 Tap to select</string>
-                                                <fontDescription key="fontDescription" name="Copperplate-Light" family="Copperplate" pointSize="18"/>
-                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" name="Copperplate-Light" family="Copperplate" pointSize="20"/>
+                                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
                                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.19959332191780821" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
-                                            <constraint firstItem="6F0-xU-8FC" firstAttribute="top" secondItem="BMp-vS-65G" secondAttribute="bottom" constant="8" id="8AK-3f-We4"/>
-                                            <constraint firstAttribute="bottom" secondItem="BMp-vS-65G" secondAttribute="bottom" constant="972.5" id="Eyb-du-dzk"/>
-                                            <constraint firstItem="6F0-xU-8FC" firstAttribute="leading" secondItem="BMp-vS-65G" secondAttribute="leading" id="FF2-Y9-46X"/>
-                                            <constraint firstAttribute="trailing" secondItem="BMp-vS-65G" secondAttribute="trailing" constant="742" id="IGF-lW-cMp"/>
-                                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="6F0-xU-8FC" secondAttribute="trailing" constant="20" symbolic="YES" id="irV-mQ-u24"/>
-                                            <constraint firstItem="BMp-vS-65G" firstAttribute="leading" secondItem="UwQ-Na-vtv" secondAttribute="leading" constant="8" id="rgK-eE-P7M"/>
+                                            <constraint firstAttribute="bottom" secondItem="BMp-vS-65G" secondAttribute="bottom" constant="1589" id="Eyb-du-dzk"/>
+                                            <constraint firstItem="6F0-xU-8FC" firstAttribute="leading" secondItem="BMp-vS-65G" secondAttribute="leading" id="G2i-fF-SC6"/>
+                                            <constraint firstAttribute="trailing" secondItem="BMp-vS-65G" secondAttribute="trailing" constant="1285" id="IGF-lW-cMp"/>
+                                            <constraint firstItem="6F0-xU-8FC" firstAttribute="top" secondItem="BMp-vS-65G" secondAttribute="bottom" constant="10" id="ZnM-Zp-YwJ"/>
+                                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="6F0-xU-8FC" secondAttribute="trailing" constant="20" symbolic="YES" id="lju-7i-WaL"/>
+                                            <constraint firstItem="BMp-vS-65G" firstAttribute="leading" secondItem="UwQ-Na-vtv" secondAttribute="leading" constant="21" id="rgK-eE-P7M"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -116,9 +119,9 @@ Tap to select</string>
                                     <constraint firstItem="UwQ-Na-vtv" firstAttribute="top" secondItem="3zt-q4-zao" secondAttribute="top" id="9E0-Fd-g4W"/>
                                     <constraint firstItem="qEe-eO-2tf" firstAttribute="leading" secondItem="3zt-q4-zao" secondAttribute="leading" id="ANQ-MQ-OkX"/>
                                     <constraint firstAttribute="bottom" secondItem="qEe-eO-2tf" secondAttribute="bottom" id="MYL-li-Dbe"/>
-                                    <constraint firstAttribute="trailing" secondItem="UwQ-Na-vtv" secondAttribute="trailing" id="WZp-uo-2ft"/>
+                                    <constraint firstAttribute="trailing" secondItem="UwQ-Na-vtv" secondAttribute="trailing" constant="-607" id="WZp-uo-2ft"/>
                                     <constraint firstAttribute="trailing" secondItem="qEe-eO-2tf" secondAttribute="trailing" id="bmr-AI-wwW"/>
-                                    <constraint firstAttribute="bottom" secondItem="UwQ-Na-vtv" secondAttribute="bottom" id="hkA-Ff-ozS"/>
+                                    <constraint firstAttribute="bottom" secondItem="UwQ-Na-vtv" secondAttribute="bottom" constant="-676" id="hkA-Ff-ozS"/>
                                     <constraint firstItem="UwQ-Na-vtv" firstAttribute="leading" secondItem="3zt-q4-zao" secondAttribute="leading" id="psf-E1-nsC"/>
                                     <constraint firstItem="qEe-eO-2tf" firstAttribute="top" secondItem="3zt-q4-zao" secondAttribute="top" id="xFK-2Y-kZx"/>
                                 </constraints>
