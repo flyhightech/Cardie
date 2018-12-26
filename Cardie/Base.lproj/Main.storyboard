@@ -80,21 +80,52 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3zt-q4-zao">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="category2" translatesAutoresizingMaskIntoConstraints="NO" id="qEe-eO-2tf">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="category2" translatesAutoresizingMaskIntoConstraints="NO" id="qEe-eO-2tf">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                     </imageView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UwQ-Na-vtv">
+                                        <rect key="frame" x="0.0" y="0.0" width="959" height="1343"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Photo Category" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BMp-vS-65G">
+                                                <rect key="frame" x="8" y="347" width="209" height="23.5"/>
+                                                <fontDescription key="fontDescription" name="Copperplate-Bold" family="Copperplate" pointSize="23"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6F0-xU-8FC">
+                                                <rect key="frame" x="8" y="379" width="144" height="36.5"/>
+                                                <string key="text">Swipe to chose,
+Tap to select</string>
+                                                <fontDescription key="fontDescription" name="Copperplate-Light" family="Copperplate" pointSize="18"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.19959332191780821" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="6F0-xU-8FC" firstAttribute="top" secondItem="BMp-vS-65G" secondAttribute="bottom" constant="8" id="8AK-3f-We4"/>
+                                            <constraint firstAttribute="bottom" secondItem="BMp-vS-65G" secondAttribute="bottom" constant="972.5" id="Eyb-du-dzk"/>
+                                            <constraint firstItem="6F0-xU-8FC" firstAttribute="leading" secondItem="BMp-vS-65G" secondAttribute="leading" id="FF2-Y9-46X"/>
+                                            <constraint firstAttribute="trailing" secondItem="BMp-vS-65G" secondAttribute="trailing" constant="742" id="IGF-lW-cMp"/>
+                                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="6F0-xU-8FC" secondAttribute="trailing" constant="20" symbolic="YES" id="irV-mQ-u24"/>
+                                            <constraint firstItem="BMp-vS-65G" firstAttribute="leading" secondItem="UwQ-Na-vtv" secondAttribute="leading" constant="8" id="rgK-eE-P7M"/>
+                                        </constraints>
+                                    </view>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="qEe-eO-2tf" firstAttribute="width" secondItem="3zt-q4-zao" secondAttribute="width" id="3fc-b9-t1z"/>
-                                    <constraint firstAttribute="trailing" secondItem="qEe-eO-2tf" secondAttribute="trailing" id="53t-af-Qcn"/>
-                                    <constraint firstAttribute="bottom" secondItem="qEe-eO-2tf" secondAttribute="bottom" id="IKN-DQ-Dj3"/>
-                                    <constraint firstItem="qEe-eO-2tf" firstAttribute="height" secondItem="3zt-q4-zao" secondAttribute="height" id="SRc-NN-Rg3"/>
-                                    <constraint firstItem="qEe-eO-2tf" firstAttribute="top" secondItem="3zt-q4-zao" secondAttribute="top" id="gE7-0c-Sih"/>
-                                    <constraint firstItem="qEe-eO-2tf" firstAttribute="leading" secondItem="3zt-q4-zao" secondAttribute="leading" id="hbQ-6A-t7K"/>
+                                    <constraint firstItem="UwQ-Na-vtv" firstAttribute="top" secondItem="3zt-q4-zao" secondAttribute="top" id="9E0-Fd-g4W"/>
+                                    <constraint firstItem="qEe-eO-2tf" firstAttribute="leading" secondItem="3zt-q4-zao" secondAttribute="leading" id="ANQ-MQ-OkX"/>
+                                    <constraint firstAttribute="bottom" secondItem="qEe-eO-2tf" secondAttribute="bottom" id="MYL-li-Dbe"/>
+                                    <constraint firstAttribute="trailing" secondItem="UwQ-Na-vtv" secondAttribute="trailing" id="WZp-uo-2ft"/>
+                                    <constraint firstAttribute="trailing" secondItem="qEe-eO-2tf" secondAttribute="trailing" id="bmr-AI-wwW"/>
+                                    <constraint firstAttribute="bottom" secondItem="UwQ-Na-vtv" secondAttribute="bottom" id="hkA-Ff-ozS"/>
+                                    <constraint firstItem="UwQ-Na-vtv" firstAttribute="leading" secondItem="3zt-q4-zao" secondAttribute="leading" id="psf-E1-nsC"/>
+                                    <constraint firstItem="qEe-eO-2tf" firstAttribute="top" secondItem="3zt-q4-zao" secondAttribute="top" id="xFK-2Y-kZx"/>
                                 </constraints>
                             </scrollView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ex3-QT-lbe">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ex3-QT-lbe">
                                 <rect key="frame" x="30" y="55" width="26" height="26"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="CancelButtonLight"/>
                                 <connections>
                                     <action selector="goBack:" destination="vpr-94-6yU" eventType="touchUpInside" id="0g0-Jj-hbJ"/>
@@ -103,12 +134,10 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="3zt-q4-zao" secondAttribute="bottom" id="BdU-hH-BOt"/>
-                            <constraint firstItem="3zt-q4-zao" firstAttribute="leading" secondItem="fK8-i4-phl" secondAttribute="leading" id="EXz-0T-4Lu"/>
-                            <constraint firstAttribute="top" secondItem="3zt-q4-zao" secondAttribute="top" id="Eb2-7B-4ep"/>
-                            <constraint firstItem="ex3-QT-lbe" firstAttribute="leading" secondItem="fK8-i4-phl" secondAttribute="leading" constant="30" id="Gwb-g6-r9z"/>
-                            <constraint firstItem="ex3-QT-lbe" firstAttribute="top" secondItem="fK8-i4-phl" secondAttribute="top" constant="35" id="bCY-7x-od9"/>
-                            <constraint firstItem="fK8-i4-phl" firstAttribute="trailing" secondItem="3zt-q4-zao" secondAttribute="trailing" id="oD3-fe-mee"/>
+                            <constraint firstItem="fK8-i4-phl" firstAttribute="trailing" secondItem="3zt-q4-zao" secondAttribute="trailing" id="1Ve-dg-SDS"/>
+                            <constraint firstAttribute="bottom" secondItem="3zt-q4-zao" secondAttribute="bottom" id="7dZ-FP-SLX"/>
+                            <constraint firstAttribute="top" secondItem="3zt-q4-zao" secondAttribute="top" id="EJB-Fn-lKB"/>
+                            <constraint firstItem="3zt-q4-zao" firstAttribute="leading" secondItem="fK8-i4-phl" secondAttribute="leading" id="ohX-CW-Md1"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="fK8-i4-phl"/>
                     </view>
