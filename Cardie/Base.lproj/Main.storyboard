@@ -80,11 +80,11 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3zt-q4-zao">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="category2" translatesAutoresizingMaskIntoConstraints="NO" id="qEe-eO-2tf">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="category2" translatesAutoresizingMaskIntoConstraints="NO" id="qEe-eO-2tf">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                     </imageView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UwQ-Na-vtv">
-                                        <rect key="frame" x="0.0" y="0.0" width="1566" height="2019"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Photo Category" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BMp-vS-65G">
                                                 <rect key="frame" x="21" y="400" width="260" height="30"/>
@@ -106,9 +106,9 @@ Tap to select</string>
                                         </subviews>
                                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.19959332191780821" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
-                                            <constraint firstAttribute="bottom" secondItem="BMp-vS-65G" secondAttribute="bottom" constant="1589" id="Eyb-du-dzk"/>
+                                            <constraint firstAttribute="bottom" secondItem="BMp-vS-65G" secondAttribute="bottom" constant="237" id="Eyb-du-dzk"/>
                                             <constraint firstItem="6F0-xU-8FC" firstAttribute="leading" secondItem="BMp-vS-65G" secondAttribute="leading" id="G2i-fF-SC6"/>
-                                            <constraint firstAttribute="trailing" secondItem="BMp-vS-65G" secondAttribute="trailing" constant="1285" id="IGF-lW-cMp"/>
+                                            <constraint firstAttribute="trailing" secondItem="BMp-vS-65G" secondAttribute="trailing" constant="94" id="IGF-lW-cMp"/>
                                             <constraint firstItem="6F0-xU-8FC" firstAttribute="top" secondItem="BMp-vS-65G" secondAttribute="bottom" constant="10" id="ZnM-Zp-YwJ"/>
                                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="6F0-xU-8FC" secondAttribute="trailing" constant="20" symbolic="YES" id="lju-7i-WaL"/>
                                             <constraint firstItem="BMp-vS-65G" firstAttribute="leading" secondItem="UwQ-Na-vtv" secondAttribute="leading" constant="21" id="rgK-eE-P7M"/>
@@ -116,13 +116,15 @@ Tap to select</string>
                                     </view>
                                 </subviews>
                                 <constraints>
+                                    <constraint firstItem="qEe-eO-2tf" firstAttribute="width" secondItem="3zt-q4-zao" secondAttribute="width" id="5Gc-cs-ttU"/>
                                     <constraint firstItem="UwQ-Na-vtv" firstAttribute="top" secondItem="3zt-q4-zao" secondAttribute="top" id="9E0-Fd-g4W"/>
                                     <constraint firstItem="qEe-eO-2tf" firstAttribute="leading" secondItem="3zt-q4-zao" secondAttribute="leading" id="ANQ-MQ-OkX"/>
                                     <constraint firstAttribute="bottom" secondItem="qEe-eO-2tf" secondAttribute="bottom" id="MYL-li-Dbe"/>
-                                    <constraint firstAttribute="trailing" secondItem="UwQ-Na-vtv" secondAttribute="trailing" constant="-607" id="WZp-uo-2ft"/>
+                                    <constraint firstAttribute="trailing" secondItem="UwQ-Na-vtv" secondAttribute="trailing" id="WZp-uo-2ft"/>
                                     <constraint firstAttribute="trailing" secondItem="qEe-eO-2tf" secondAttribute="trailing" id="bmr-AI-wwW"/>
-                                    <constraint firstAttribute="bottom" secondItem="UwQ-Na-vtv" secondAttribute="bottom" constant="-676" id="hkA-Ff-ozS"/>
+                                    <constraint firstAttribute="bottom" secondItem="UwQ-Na-vtv" secondAttribute="bottom" id="hkA-Ff-ozS"/>
                                     <constraint firstItem="UwQ-Na-vtv" firstAttribute="leading" secondItem="3zt-q4-zao" secondAttribute="leading" id="psf-E1-nsC"/>
+                                    <constraint firstItem="qEe-eO-2tf" firstAttribute="height" secondItem="3zt-q4-zao" secondAttribute="height" id="sDR-NA-cUt"/>
                                     <constraint firstItem="qEe-eO-2tf" firstAttribute="top" secondItem="3zt-q4-zao" secondAttribute="top" id="xFK-2Y-kZx"/>
                                 </constraints>
                             </scrollView>
@@ -204,6 +206,11 @@ Tap to select</string>
                                         <state key="normal" title="Share Card">
                                             <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="14"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="shareCard:" destination="fCr-8v-13j" eventType="touchUpInside" id="RYl-sQ-CvG"/>
                                         </connections>

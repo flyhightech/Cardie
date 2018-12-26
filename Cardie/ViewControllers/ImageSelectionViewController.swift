@@ -26,22 +26,24 @@ class ImageSelectionViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         initialDimView.alpha = 0
         backButton.alpha = 0
-        
         
         if let availableImage = image, let availableCategory = category {
             initialImageView.image = availableImage
             categoryLabel.text = availableCategory.categoryName
         }
         
+        
     }
+    
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         loadData()
     }
+    
     
     func loadData() {
         imageDataRequest.getData{ [weak self] dataResult in
@@ -54,10 +56,12 @@ class ImageSelectionViewController: UIViewController {
                     self?.setupUI()
                 }
             }
+            
         }
     }
     
     func setupUI() {
+        
         UIView.animate(withDuration: 0.5) {
             self.initialDimView.alpha = 1
             self.backButton.alpha = 1
@@ -79,6 +83,8 @@ class ImageSelectionViewController: UIViewController {
             photoView.photographerLabel.text = image.photographer
             
             scrollView.addSubview(photoView)
+            
+            
         }
         
         let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(ImageSelectionViewController.didPressOnScrollView(recognizer:)))
@@ -88,14 +94,17 @@ class ImageSelectionViewController: UIViewController {
     }
     
     @objc
-    func didPressOnScrollView(recognizer:UITapGestureRecognizer) {
+    func didPressOnScrollView (recognizer:UITapGestureRecognizer) {
         if currentScrollViewPage != 0 {
             self.performSegue(withIdentifier: "showCard", sender: self)
-        } else {
+        }else{
             scrollView.setContentOffset(CGPoint(x: self.view.frame.width, y: 0), animated: true)
             currentScrollViewPage = 1
         }
+        
     }
+    
+    
     
     @IBAction func goBack(_ sender: UIButton) {
         
@@ -123,13 +132,13 @@ class ImageSelectionViewController: UIViewController {
     
 }
 
-extension ImageSelectionViewController:Scaling {
+extension ImageSelectionViewController : Scaling {
     func scalingImageView(transition: ScaleTransitioningDelegate) -> UIImageView? {
         return initialImageView
     }
 }
 
-extension ImageSelectionViewController:UIScrollViewDelegate {
+extension ImageSelectionViewController : UIScrollViewDelegate {
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
         currentScrollViewPage = Int(scrollView.contentOffset.x / scrollView.frame.size.width)
     }
