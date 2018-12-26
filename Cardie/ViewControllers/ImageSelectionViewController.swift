@@ -58,7 +58,6 @@ class ImageSelectionViewController: UIViewController {
     }
     
     func setupUI() {
-        
         UIView.animate(withDuration: 0.5) {
             self.initialDimView.alpha = 1
             self.backButton.alpha = 1

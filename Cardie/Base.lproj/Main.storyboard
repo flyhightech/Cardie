@@ -147,6 +147,8 @@ Tap to select</string>
                     <nil key="simulatedTopBarMetrics"/>
                     <connections>
                         <outlet property="backButton" destination="ex3-QT-lbe" id="NS4-en-8md"/>
+                        <outlet property="categoryLabel" destination="BMp-vS-65G" id="Ocw-vS-fV8"/>
+                        <outlet property="initialDimView" destination="UwQ-Na-vtv" id="9vW-4Y-2X6"/>
                         <outlet property="initialImageView" destination="qEe-eO-2tf" id="JHo-Sh-rcY"/>
                         <outlet property="scrollView" destination="3zt-q4-zao" id="gfB-J4-fvK"/>
                         <segue destination="fCr-8v-13j" kind="presentation" identifier="showCard" modalTransitionStyle="crossDissolve" id="wg4-jQ-ehq"/>
