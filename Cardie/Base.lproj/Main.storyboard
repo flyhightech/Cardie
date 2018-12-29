@@ -83,7 +83,7 @@
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="category2" translatesAutoresizingMaskIntoConstraints="NO" id="qEe-eO-2tf">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                     </imageView>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UwQ-Na-vtv">
+                                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UwQ-Na-vtv">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Photo Category" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BMp-vS-65G">
@@ -168,39 +168,27 @@ Tap to select</string>
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GEE-m1-eIq">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GEE-m1-eIq">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JAB-xp-uxy">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="JAB-xp-uxy">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="35V-Wq-9qn">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="35V-Wq-9qn">
                                         <rect key="frame" x="35" y="45" width="26" height="26"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" image="CancelButtonDark"/>
                                         <connections>
                                             <action selector="dismissVC:" destination="fCr-8v-13j" eventType="touchUpInside" id="4Qo-Yb-eWl"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="The best preperation for tomorrow is to do your best today." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s20-tx-4hW">
-                                        <rect key="frame" x="78" y="289" width="218" height="89"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="By: Random" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="avj-W9-HiP">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="By: Random" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="avj-W9-HiP">
                                         <rect key="frame" x="138" y="401" width="99" height="18"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qWh-Yh-q7q">
-                                        <rect key="frame" x="107" y="248" width="161" height="33"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qWh-Yh-q7q">
+                                        <rect key="frame" x="126" y="248" width="123" height="33"/>
                                         <color key="backgroundColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" name="Copperplate-Bold" family="Copperplate" pointSize="20"/>
                                         <state key="normal" title="Share Card">
@@ -215,11 +203,37 @@ Tap to select</string>
                                             <action selector="shareCard:" destination="fCr-8v-13j" eventType="touchUpInside" id="RYl-sQ-CvG"/>
                                         </connections>
                                     </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="The best preperation for tomorrow is to do your best today." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s20-tx-4hW">
+                                        <rect key="frame" x="68" y="289" width="240" height="89"/>
+                                        <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="35V-Wq-9qn" firstAttribute="leading" secondItem="GEE-m1-eIq" secondAttribute="leading" constant="35" id="1DI-2V-oay"/>
+                                    <constraint firstAttribute="bottom" secondItem="avj-W9-HiP" secondAttribute="bottom" constant="248" id="BYS-hv-JPM"/>
+                                    <constraint firstItem="qWh-Yh-q7q" firstAttribute="centerX" secondItem="JAB-xp-uxy" secondAttribute="centerX" id="KDv-05-lbt"/>
+                                    <constraint firstAttribute="bottom" secondItem="JAB-xp-uxy" secondAttribute="bottom" id="MFk-3t-DM3"/>
+                                    <constraint firstItem="qWh-Yh-q7q" firstAttribute="top" secondItem="GEE-m1-eIq" secondAttribute="top" constant="248" id="RTE-pI-Tvf"/>
+                                    <constraint firstItem="avj-W9-HiP" firstAttribute="centerX" secondItem="s20-tx-4hW" secondAttribute="centerX" id="RfM-6i-Xg9"/>
+                                    <constraint firstItem="35V-Wq-9qn" firstAttribute="top" secondItem="GEE-m1-eIq" secondAttribute="top" constant="45" id="aSq-fk-Gmq"/>
+                                    <constraint firstItem="avj-W9-HiP" firstAttribute="top" secondItem="s20-tx-4hW" secondAttribute="bottom" constant="23" id="ez8-Cz-QIu"/>
+                                    <constraint firstItem="qWh-Yh-q7q" firstAttribute="centerX" secondItem="GEE-m1-eIq" secondAttribute="centerX" id="g48-cl-Ry1"/>
+                                    <constraint firstItem="JAB-xp-uxy" firstAttribute="top" secondItem="GEE-m1-eIq" secondAttribute="top" id="pl8-Zi-0gG"/>
+                                    <constraint firstItem="JAB-xp-uxy" firstAttribute="leading" secondItem="GEE-m1-eIq" secondAttribute="leading" id="raC-WD-rG0"/>
+                                    <constraint firstItem="qWh-Yh-q7q" firstAttribute="centerX" secondItem="avj-W9-HiP" secondAttribute="centerX" id="rqH-Ye-yZS"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="GEE-m1-eIq" firstAttribute="top" secondItem="yLL-e8-AEE" secondAttribute="top" id="9FL-ce-gMF"/>
+                            <constraint firstAttribute="trailing" secondItem="GEE-m1-eIq" secondAttribute="trailing" id="G2a-2J-uIk"/>
+                            <constraint firstItem="GEE-m1-eIq" firstAttribute="bottom" secondItem="K4a-6F-uDU" secondAttribute="bottom" id="NjP-Qt-hF1"/>
+                            <constraint firstItem="GEE-m1-eIq" firstAttribute="leading" secondItem="yLL-e8-AEE" secondAttribute="leading" id="qWq-Lk-VN0"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="K4a-6F-uDU"/>
                     </view>
                     <connections>
