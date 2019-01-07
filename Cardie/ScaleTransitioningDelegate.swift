@@ -30,8 +30,6 @@ extension ScaleTransitioningDelegate : UIViewControllerAnimatedTransitioning {
     func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
         let containerView = transitionContext.containerView
         
-        
-        
         guard let fromVC = transitionContext.viewController(forKey: .from) else {return}
         guard let toVC = transitionContext.viewController(forKey: .to) else {return}
         
@@ -73,7 +71,6 @@ extension ScaleTransitioningDelegate : UIViewControllerAnimatedTransitioning {
             transitionStateB = .begin
         }
         
-        
         prepareViews(for: transitionStateA, containerView: containerView, backgroundVC: backgroundVC, backgroundImageView: backgoundImageView, foregroundImageView: foregroundImageView, snapshotImageView: imageViewSnapshot)
         
         foregroundVC.view.layoutIfNeeded()
@@ -91,8 +88,6 @@ extension ScaleTransitioningDelegate : UIViewControllerAnimatedTransitioning {
             transitionContext.completeTransition(!transitionContext.transitionWasCancelled)
             
         }
-        
-        
     }
     
     func prepareViews (for state:TransitionState, containerView:UIView, backgroundVC:UIViewController, backgroundImageView:UIImageView, foregroundImageView:UIImageView, snapshotImageView:UIImageView) {
@@ -108,10 +103,7 @@ extension ScaleTransitioningDelegate : UIViewControllerAnimatedTransitioning {
             backgroundVC.view.alpha = 0
             snapshotImageView.frame = containerView.convert(foregroundImageView.frame, from: foregroundImageView.superview)
         }
-        
     }
-    
-    
 }
 
 extension ScaleTransitioningDelegate : UINavigationControllerDelegate {
@@ -123,10 +115,8 @@ extension ScaleTransitioningDelegate : UINavigationControllerDelegate {
             let navbarVisible = operation == .pop
             navigationController.setNavigationBarHidden(!navbarVisible, animated: true)
             return self
-        }else{
+        } else {
             return nil
         }
-        
     }
-    
 }
